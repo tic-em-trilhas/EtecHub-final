@@ -1,0 +1,225 @@
+/* Fonte moderna: Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+.alternativas {
+    display: flex;
+    flex-direction: column;
+    gap: 10px; /* espaço entre as opções */
+    margin-top: 10px;
+  }
+  
+  .alternativas label {
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+
+header {
+    background-color: #800020;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+  } 
+
+/* Navegação */
+nav {
+  background-color: #ffffff;
+  padding: 10px 20px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+nav a {
+  color: #800020;
+  text-decoration: none;
+  margin-right: 15px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Área principal */
+main {
+  padding: 30px 20px;
+  max-width: 900px;
+  margin: auto;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+/* Títulos */
+h1, h2, h3 {
+  color: #800020;
+  margin-bottom: 15px;
+}
+
+/* Estilo das questões */
+.questao {
+  background-color: #ffffff;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  padding: 20px;
+  margin-bottom: 30px;
+  box-shadow: 0 6px 12px rgba(128, 0, 32, 0.1); /* sombra em vinho sutil */
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.questao:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(128, 0, 32, 0.15);
+}
+
+.questao p {
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+/* Área de botões */
+.botoes {
+  margin-top: 30px;
+  text-align: center;
+}
+
+/* Botão estilizado vinho metálico */
+.btn-vinho-metalico {
+  background-color: #4b0014;
+  color: #fff;
+  border: none;
+  padding: 12px 26px;
+  font-weight: 500;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15), inset 0 0 5px #800020;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.btn-vinho-metalico {
+    background-color: #4b0014; /* vinho escuro */
+    color: #ffffff; /* texto branco */
+    border: none;
+    padding: 12px 26px;
+    font-weight: 500;
+    border-radius: 8px;
+    box-shadow:
+      0 4px 10px rgba(0, 0, 0, 0.15),     /* sombra externa */
+      inset 0 0 5px rgba(255, 255, 255, 0.08); /* brilho metálico interno */
+    transition: background 0.3s ease, transform 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .btn-vinho-metalico:hover {
+    background-color: #66001b; /* um pouco mais claro ao passar o mouse */
+    transform: scale(1.03);
+  }
+  
+  .btn-vinho-metalico:active {
+    background-color: #32000c; /* ainda mais escuro ao clicar */
+    transform: scale(0.98);
+  }
+  .btn-enviar {
+    background-color: #000000; /* Cor padrão: preto */
+    color: #ffffff;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 30px; /* Arredondado */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  /* Ao passar o mouse */
+  .btn-enviar:hover {
+    background-color: #800020; /* Cor vinho */
+  }
+  .questao img {
+    display: block;
+    margin: 10px auto;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  
+  /* Ao clicar ou focar */
+  .btn-enviar:active,
+  .btn-enviar:focus {
+    background-color: #800020; /* Cor vinho */
+    outline: none;
+  }
+  .centralizar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* opcional, para afastar do topo */
+  }
+  
+  
+
+/* Rodapé */
+footer {
+  background-color: #800020;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+/* Contêiner do confete */
+#confete-container {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    pointer-events: none;
+    z-index: 9999;
+  }
+  
+  /* Partículas de confete */
+  .confete {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: hsl(var(--hue), 70%, 60%);
+    opacity: 0.9;
+    border-radius: 2px;
+    animation: cairConfete 1s ease-out forwards;
+  }
+  
+  /* Animação de queda */
+  @keyframes cairConfete {
+    0% {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
